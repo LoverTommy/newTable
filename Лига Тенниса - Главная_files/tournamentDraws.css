@@ -68,6 +68,7 @@
     font-size: 24px;
     font-family: 'Montserrat';
     margin-top: 20px;
+    padding-left: 20px;
 }
 
 .roundsName div {
@@ -183,6 +184,59 @@
 
 .matchItem .matchInfo .player .left {
     margin-left: 20px;
+}
+
+.drawsWrapper6 .linesColumn1 {
+    justify-content: center;
+    margin-top: 6px;
+}
+
+.drawsWrapper6 .linesColumn1 .line {
+    margin: 0;
+}
+
+.drawsWrapper6 .linesColumn1 .line:first-child .left div:last-child {
+    height: 1px;
+}
+
+.drawsWrapper6 .linesColumn1 .line:last-child .left div:first-child {
+    height: 1px;
+}
+
+.drawsWrapper6 .linesColumn1 .line .middle div {
+    height: 159px;
+}
+
+.drawsWrapper6 .linesColumn1 .line:first-child .right div {
+    margin-top: 30px;
+}
+
+.drawsWrapper6 .linesColumn1 .line:last-child .right div {
+    margin-bottom: 15px;
+}
+
+.drawsWrapper6 .linesColumn1:nth-child(4) .left div {
+    height: 2px !important;
+}
+
+.drawsWrapper6 .linesColumn1:nth-child(4) .middle div {
+    height: 144px;
+}
+
+.drawsWrapper6 .linesColumn1:nth-child(4) {
+    margin-top: 18px;
+}
+
+.drawsWrapper6 .linesColumn1:nth-child(4) .line .right div {
+    margin-bottom: 30px;
+}
+
+.drawsWrapper6 .column2 {
+    justify-content: center;
+}
+
+.drawsWrapper6 .column:nth-child(1) .matchItem {
+    margin-bottom: 1rem;
 }
 
 
@@ -507,5 +561,9 @@ table {
 
     .states h4 {
         font-size: 12px;
+    }
+
+    .tableName {
+        font-size: 18px;
     }
 }
