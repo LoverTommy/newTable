@@ -1,0 +1,405 @@
+.wrapper {
+    padding-bottom: 20px;
+}
+
+.drawsWrapper {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+
+
+.roundsName {
+    display: flex;
+    gap: 22px;
+    width: max-content;
+}
+
+.roundsName div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #e6e6e6;
+    width: 448px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.tableName {
+    font-size: 24px;
+    font-family: 'Montserrat';
+    margin-top: 20px;
+}
+
+.roundsName div {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.roundsName div span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.table {
+    display: flex;
+    width: 100%;
+}
+
+.table div .matchItem {
+    width: 100%;
+    margin: 1.2rem 0 1.2rem 0;
+    background-color: white;
+    border: 2px rgba(0, 0, 0, 0.082) solid;
+}
+
+.table .column {
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.027);
+    display: flex;
+    flex-direction: column;
+    min-width: 448px;
+    justify-content: space-around;
+}
+
+.table .column:nth-child(1) .matchItem:nth-child(odd) {
+    margin-top: 2.4rem;
+}
+
+.table .column:nth-child(1) .matchItem:nth-child(2n) {
+    margin-bottom: 2.4rem;
+}
+
+.table .column:nth-child(7) {
+    justify-content: space-evenly;
+}
+
+.table .column:nth-child(4) .matchItem {
+    margin: 0;
+}
+
+
+.lines {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.table .linesColumn3 {
+    justify-content: center;
+}
+
+.table .linesColumn1 .middle div {
+    height: 162px;
+}
+
+.table .linesColumn2 .middle div {
+    height: 360px;
+}
+
+.table .linesColumn3 .middle div {
+    height: 716px;
+}
+
+.table .linesColumn3 .line:first-child .left div:last-child {
+    height: 1px;
+}
+
+.table .linesColumn3 .line:first-child .right div {
+    margin-top: -50px;
+}
+
+.table .linesColumn3 .line:last-child .right div {
+    margin-top: 50px;
+}
+
+.table .linesColumn3 .line:last-child .left div:first {
+    height: 1px;
+}
+
+.table .linesColumn4 .middle div {
+    height: 770px;
+}
+
+.matchItem .matchInfo .player .left {
+    margin-left: 20px;
+}
+
+.drawsWrapper8 .table .linesColumn4 .line .middle div {
+    height: 715px;
+}
+
+.lines .line {
+    display: flex;
+}
+
+.lines .line .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.lines .line .left div {
+    width: 10px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+.lines .line .middle div {
+    width: 2px;
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+.lines .line .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lines .line .right div {
+    width: 10px;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.151);
+}
+
+
+.drawsCategory {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 100%;
+}
+
+.drawsCategory h4 {
+    color: rgba(0, 0, 0, 0.548);
+    font-size: 20px;
+    transition: 0.6s;
+    cursor: pointer;
+    padding: 15px 5px;
+}
+
+.drawsCategory h4:hover {
+    color: #141414;
+}
+
+.drawsCategory .activeCategory {
+    position: relative;
+    color: #141414;
+}
+
+.drawsCategory .activeCategory::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #7814ff;
+    bottom: 0;
+    left: 0;
+}
+
+.drawsCategory h4 .stroke {
+    background-color: #7814ff;
+    width: 0%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    animation-fill-mode: forwards;
+}
+
+.drawsCategory .activeCategory .stroke {
+    width: 100%;
+}
+
+.groups {
+    margin: 0 auto;
+    max-width: max-content;
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+
+.groups .groupTitle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #e6e6e6;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.groups .groupTitle h4 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.groups .groupTable table {
+    font-family: 'Montserrat';
+    font-weight: 600;
+}
+
+.groups .groupTable table * {
+    margin: 0;
+    padding: 0;
+}
+
+.groups .groupTable table {
+    margin-top: 20px;
+}
+
+.groups .groupTable table thead tr th:first-child {
+    width: 400px;
+    padding: 10px;
+    text-align: left;
+    font-size: 18px;
+    vertical-align: bottom;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.groups .groupTable table thead tr th {
+    color: rgba(0, 0, 0, 0.644);
+    font-weight: 600;
+}
+
+.groups .groupTable table thead tr th:nth-child(6),
+.groups .groupTable table thead tr th:nth-child(7),
+.groups .groupTable table thead tr th:nth-child(8),
+.groups .groupTable table thead tr th:nth-child(9) {
+    padding: 20px;
+}
+
+.groups .groupTable table thead .for3 th:nth-child(5),
+.groups .groupTable table thead .for3 th:nth-child(6),
+.groups .groupTable table thead .for3 th:nth-child(7),
+.groups .groupTable table thead .for3 th:nth-child(8) {
+    padding: 20px;
+}
+
+.groups .groupTable table tr .result {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 150%;
+    width: 50px;
+}
+
+.groups .groupTable table tbody tr td:first-child {
+    text-align: left;
+}
+
+.groups .groupTable table tr .blur {
+    background-color: rgba(0, 0, 0, 0.034);
+}
+
+.groups .groupTable table tbody tr td:first-child,
+.groups .groupTable table tbody tr td:last-child {
+    padding: 20px;
+}
+
+.groups .groupTable table tbody tr td:last-child {
+    color: rgba(0, 0, 0, 0.726);
+}
+
+.groups .groupTable table tbody tr td.win {
+    color: #7814ff;
+}
+
+.groups .groupTable table tbody tr td.lose {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.groups .groupTable table tbody tr td {
+    text-align: center;
+}
+
+tbody, tbody td {
+    border: 1px solid rgba(0, 0, 0, 0.103);
+    border-collapse: collapse;
+}
+
+tbody {
+    border: 2px solid rgba(0, 0, 0, 0.103);
+}
+  
+table {
+    border-collapse: collapse;
+}
+
+
+@media screen and (max-width: 1100px) {
+    .groups {
+        max-width: 95%;
+    }
+
+    .groupTable {
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .groupTable table {
+        width: max-content;
+        margin-bottom: 5px;
+    }
+    
+    .groupTable::-webkit-scrollbar {
+        background-color: rgba(0, 0, 0, 0.048);
+        height: 6px;
+        border-radius: 12px;
+    }
+
+    .groupTable::-webkit-scrollbar-thumb {
+        background-color: black;
+        border-radius: 12px;
+    }
+
+    .groups .groupTable table thead tr th:first-child {
+        width: 200px;
+    }
+
+    .groups .groupTable table thead .for3 th:nth-child(5), .groups .groupTable table thead .for3 th:nth-child(6), .groups .groupTable table thead .for3 th:nth-child(7), .groups .groupTable table thead .for3 th:nth-child(8),
+    .groups .groupTable table thead tr th:nth-child(6), .groups .groupTable table thead tr th:nth-child(7), .groups .groupTable table thead tr th:nth-child(8), .groups .groupTable table thead tr th:nth-child(9) {
+        padding: 14px;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    .drawsCategory {
+        gap: 20px;
+    }
+
+    .drawsCategory h4 {
+        font-size: 16px;
+    }
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .drawsCategory h4 {
+        padding: 5px 5px 10px 5px;
+    }
+
+    .drawsCategory .activeCategory::after {
+        height: 2px;
+    }
+
+    .drawsCategory {
+        padding-top: 10px;
+        flex-wrap: wrap;
+        row-gap: 10px;
+    }
+
+    .table .column {
+        min-width: 90vw;
+    }
+
+    .roundsName div {
+        width: 90vw;
+    }
+}
