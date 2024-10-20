@@ -2,8 +2,17 @@
     padding-bottom: 20px;
 }
 
+.matchItem .matchInfo::after {
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(126, 24, 221) 50%, rgb(0, 0, 0) 50%) !important;
+    position: absolute;
+    left: 0px;
+}
+
 .drawsWrapper {
-    max-width: 1600px;
+    max-width: 1860px;
     width: 100%;
     margin: 0 auto;
     overflow: hidden;
@@ -78,7 +87,7 @@
 
 .table div .matchItem {
     width: 100%;
-    margin: 1.2rem 0 1.2rem 0;
+    margin: 1.2rem 0 .1rem 0;
     background-color: white;
     border: 2px rgba(0, 0, 0, 0.082) solid;
 }
@@ -93,16 +102,14 @@
 }
 
 .table .column:nth-child(1) .matchItem:nth-child(odd) {
-    margin-top: 2.4rem;
+    margin-top: 1.4rem;
 }
 
 .table .column:nth-child(1) .matchItem:nth-child(2n) {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1rem;
 }
 
-.table .column:nth-child(7) {
-    justify-content: space-evenly;
-}
+
 
 .table .column:nth-child(4) .matchItem {
     margin: 0;
@@ -115,49 +122,70 @@
     justify-content: space-around;
 }
 
-.table .linesColumn3 {
-    justify-content: center;
+.table .linesColumn1 .middle div {
+    height: 144px;
 }
 
-.table .linesColumn1 .middle div {
-    height: 162px;
+.table .linesColumn1 .line {
+    margin-top: 8px;
+}
+
+.table .linesColumn1 .right div {
+    margin-top: 10px;
 }
 
 .table .linesColumn2 .middle div {
-    height: 360px;
+    height: 303px;
+}
+
+
+.table .linesColumn2 .line {
+    margin-top: 20px;
+}
+
+.drawsWrapper12 .linesColumn2 .line {
+    margin-top: 0;
+}
+
+.drawsWrapper12 .linesColumn2 {
+    margin-top: 20px;
+}
+
+.drawsWrapper12 .linesColumn2 .middle div {
+    height: 302px !important;
+}
+
+.drawsWrapper12 .column3 {
+    justify-content: space-evenly;
 }
 
 .table .linesColumn3 .middle div {
-    height: 716px;
+    height: 606px;
 }
 
-.table .linesColumn3 .line:first-child .left div:last-child {
-    height: 1px;
+.table .linesColumn3 {
+    margin-top: 18px;
 }
 
-.table .linesColumn3 .line:first-child .right div {
-    margin-top: -50px;
+.drawsWrapper12 .linesColumn3 {
+    margin-top: 20px;
 }
 
-.table .linesColumn3 .line:last-child .right div {
-    margin-top: 50px;
+.drawsWrapper12 .linesColumn3 .line .middle div {
+    height: 350px !important;
 }
 
-.table .linesColumn3 .line:last-child .left div:first {
-    height: 1px;
-}
+
 
 .table .linesColumn4 .middle div {
-    height: 770px;
+    height: 1430px;
 }
 
 .matchItem .matchInfo .player .left {
     margin-left: 20px;
 }
 
-.drawsWrapper8 .table .linesColumn4 .line .middle div {
-    height: 715px;
-}
+
 
 .lines .line {
     display: flex;
@@ -358,6 +386,39 @@ table {
     border-collapse: collapse;
 }
 
+.drawsWrapper12 .linesColumn2 {
+    justify-content: center;
+}
+
+.drawsWrapper12 .linesColumn2 .line:first-child .left div:last-child {
+    height: 1px;
+}
+
+.drawsWrapper12 .linesColumn2 .line:last-child .left div:first-child {
+    height: 1px;
+}
+
+.drawsWrapper12 .linesColumn2 .line:first-child .middle div {
+    height: 358px;
+}
+
+.drawsWrapper12 .linesColumn2 .line:last-child .middle div {
+    height: 359px;
+}
+
+
+.drawsWrapper12 .linesColumn2 .line:first-child .right div {
+    margin-bottom: 50px;
+}
+
+.drawsWrapper12 .linesColumn2 .line:last-child .right div {
+    margin-top: 53px;
+}
+
+
+.drawsWrapper12 .linesColumn3 .line .middle div {
+    height: 413px;
+}
 
 @media screen and (max-width: 1100px) {
     .groups {
