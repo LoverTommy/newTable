@@ -9,7 +9,35 @@
     overflow: hidden;
 }
 
+.states {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 20px;
+}
 
+.groupTable {
+    display: flex;
+    justify-content: center;
+}
+
+.states h4 {
+    font-family: 'Montserrat';
+    padding: 12px;
+    width: 30%;
+    background-color: rgba(0, 0, 0, 0.068);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+
+.states .activeButton {
+    background-color: #7814ff;
+    color: white;
+}
 
 .roundsName {
     display: flex;
@@ -337,6 +365,10 @@ table {
     }
 
     .groupTable {
+        display: block;
+    }
+
+    .groupTable {
         width: 100%;
         overflow-x: auto;
     }
@@ -377,6 +409,15 @@ table {
         font-size: 16px;
     }
 
+    .states {
+        max-width: 95%;
+    }
+
+    .states h4 {
+        font-size: 14px;
+        padding: 5px;
+        width: 45%;
+    }
 }
 
 
@@ -401,5 +442,9 @@ table {
 
     .roundsName div {
         width: 90vw;
+    }
+
+    .states h4 {
+        font-size: 12px;
     }
 }

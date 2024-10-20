@@ -300,11 +300,12 @@
       ><img src="./Лига Тенниса - Главная_files/arrowScroll.svg" alt=""
     /></span>
 
-    <div class="groups">
-      <div class="groupTitle">
-        <h4>Групповая стадия</h4>
-      </div>
+    <div class="states">
+      <h4 id="groupState">Групповая стадия</h4>  
+      <h4 id="mainState">Основная стадия</h4>
+    </div>
 
+    <div class="groups" id="groups">
       <div class="groupTable">
         <table>
           <thead>
@@ -3306,11 +3307,40 @@
       </div>  
     </div>
 
-    <script src="./Лига Тенниса - Главная_files/header.js.Без названия"></script>
-
-    <script src="./Лига Тенниса - Главная_files/tournamentInfo.js.Без названия"></script>
+    
 
     <script>
+
+      const draws = document.getElementsByClassName('drawsWrapper');
+      const groups = document.getElementById('groups');
+
+      const groupsButton = document.getElementById('groupState');
+      const drawsButton = document.getElementById('mainState');
+
+      groupsButton.addEventListener('click',(eo)=>{
+
+        groups.style.display = 'block';
+
+        drawsButton.classList.remove('activeButton');
+        groupsButton.classList.add('activeButton');
+
+        for(let i of draws) {
+          i.style.display = 'none';
+        }
+      })
+
+      drawsButton.addEventListener('click',(eo)=>{
+        for(let i of draws) {
+          i.style.display = 'block';
+        }
+
+        drawsButton.classList.add('activeButton');
+        groupsButton.classList.remove('activeButton');
+
+        groups.style.display = 'none';
+
+      })
+
       const filterItems = document.getElementsByClassName("filterItem");
 
       for (let i of filterItems) {
@@ -3331,113 +3361,7 @@
         });
       }
 
-      const matchTypeSingle = document.getElementById("matchTypeSingle");
-      const matchTypeDouble = document.getElementById("matchTypeDouble");
-      const matchTypeMixed = document.getElementById("matchTypeMixed");
-      const matchTypeTeams = document.getElementById("matchTypeTeams");
-
-      const matchTypeTableSingle = document.getElementById("drawsSingle");
-      const matchTypeTableDouble = document.getElementById("drawsDouble");
-      const matchTypeTableMixed = document.getElementById("drawsMixed");
-      const matchTypeTableTeams = document.getElementById("drawsTeams");
-
-      const category1Filter = document.getElementById("category1");
-      const category2Filter = document.getElementById("category2");
-      const category3Filter = document.getElementById("category3");
-
-      const category1Lists = document.getElementsByClassName("category1Table");
-      const category2Lists = document.getElementsByClassName("category2Table");
-      const category3Lists = document.getElementsByClassName("category3Table");
-
-      let activeMatchType = matchTypeSingle;
-      let activeMatchTypeTable = matchTypeTableSingle;
-      let activeCategoryFilter = category1Filter;
-      let activeCategoryLists = category1Lists;
-
-      matchTypeTeams.addEventListener("click", (eo) => {
-        activeMatchType.classList.remove("matchTypeActive");
-        matchTypeTeams.classList.add("matchTypeActive");
-        activeMatchTypeTable.style.display = "none";
-        matchTypeTableTeams.style.display = "block";
-
-        activeMatchType = matchTypeTeams;
-        activeMatchTypeTable = matchTypeTableTeams;
-      });
-
-      matchTypeSingle.addEventListener("click", (eo) => {
-        activeMatchType.classList.remove("matchTypeActive");
-        matchTypeSingle.classList.add("matchTypeActive");
-        activeMatchTypeTable.style.display = "none";
-        matchTypeTableSingle.style.display = "block";
-
-        activeMatchType = matchTypeSingle;
-        activeMatchTypeTable = matchTypeTableSingle;
-      });
-
-      matchTypeDouble.addEventListener("click", (eo) => {
-        activeMatchType.classList.remove("matchTypeActive");
-        matchTypeDouble.classList.add("matchTypeActive");
-        activeMatchTypeTable.style.display = "none";
-        matchTypeTableDouble.style.display = "block";
-
-        activeMatchType = matchTypeDouble;
-        activeMatchTypeTable = matchTypeTableDouble;
-      });
-
-      matchTypeMixed.addEventListener("click", (eo) => {
-        activeMatchType.classList.remove("matchTypeActive");
-        matchTypeMixed.classList.add("matchTypeActive");
-        activeMatchTypeTable.style.display = "none";
-        matchTypeTableMixed.style.display = "block";
-
-        activeMatchType = matchTypeMixed;
-        activeMatchTypeTable = matchTypeTableMixed;
-      });
-
-      console.log(activeCategoryLists);
-
-      category1Filter.addEventListener("click", (eo) => {
-        activeCategoryFilter.classList.remove("activeCategory");
-        category1Filter.classList.add("activeCategory");
-        for (let i of activeCategoryLists) {
-          i.style.display = "none";
-        }
-        for (let x of category1Lists) {
-          x.style.display = "flex";
-        }
-
-        activeCategoryFilter = category1Filter;
-        activeCategoryLists = category1Lists;
-      });
-
-      category2Filter.addEventListener("click", (eo) => {
-        activeCategoryFilter.classList.remove("activeCategory");
-        category2Filter.classList.add("activeCategory");
-        for (let i of activeCategoryLists) {
-          i.style.display = "none";
-        }
-        for (let x of category2Lists) {
-          x.style.display = "flex";
-        }
-
-        activeCategoryFilter = category2Filter;
-        activeCategoryLists = category2Lists;
-      });
-
-      category3Filter.addEventListener("click", (eo) => {
-        activeCategoryFilter.classList.remove("activeCategory");
-        category3Filter.classList.add("activeCategory");
-        for (let i of activeCategoryLists) {
-          i.style.display = "none";
-        }
-        for (let x of category3Lists) {
-          x.style.display = "flex";
-        }
-
-        activeCategoryFilter = category3Filter;
-        activeCategoryLists = category3Lists;
-      });
-
+      
       const activeYearWrapper = document.getElementById("activeYearWrapper");
       const customSelectYears = document.getElementById("customSelectYears");
 
