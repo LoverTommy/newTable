@@ -27,6 +27,131 @@
     padding-bottom: 50px;
 }
 
+.wp6First .table .round:first-child .matchItem:first-child,
+.wp6First .table .round:first-child .matchItem:nth-child(4) {
+    height: 117px;
+    border: none;
+    background: none;
+}
+
+.hiddens {
+    height: 117px;
+    border: none !important;
+    background: none !important;
+}
+
+.wp6First .table .linesColumn1 .line:first-child .left {
+    justify-content: end;
+}
+
+.wp6First .table .linesColumn1 .line:first-child .middle div {
+    height: 66px;
+}
+
+.wp6First .table .linesColumn1 .line:first-child {
+    margin-top: 16px;
+}
+
+.wp6First .table .linesColumn1 .line:first-child .right {
+    justify-content: start;
+}
+
+.wp6First .table .linesColumn1 .line:first-child .right div {
+    margin-top: 0;
+}
+
+.wp6First .table .linesColumn1 .line:last-child .left {
+    justify-content: start;
+}
+
+.wp6First .table .linesColumn1 .line:last-child .middle div {
+    height: 76px;
+}
+
+.wp6First .table .linesColumn1 .line:last-child .right {
+    justify-content: end;
+}
+
+.wp6First .table .linesColumn1 {
+    justify-content: space-evenly;
+}
+
+.wp6First .table .linesColumn1 .line:last-child {
+    margin-top: 14px;
+}
+
+.wp12Hidden .table .round2 {
+    justify-content: space-around;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(1) .left,
+.wp12Hidden .table .linesColumn1 .line:nth-child(2) .left {
+    justify-content: end;
+}
+
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(1) .right div,
+.wp12Hidden .table .linesColumn1 .line:nth-child(2) .right div {
+    margin-top: 0;
+}
+
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(3) .right div,
+.wp12Hidden .table .linesColumn1 .line:nth-child(4) .right div {
+    margin-top: 0;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(3) .left,
+.wp12Hidden .table .linesColumn1 .line:nth-child(4) .left {
+    justify-content: start;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(1) .middle div,
+.wp12Hidden .table .linesColumn1 .line:nth-child(2) .middle div {
+    height: 72px;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(4) .middle div,
+.wp12Hidden .table .linesColumn1 .line:nth-child(3) .middle div {
+    height: 72px;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(1) .middle div:first-child,
+.wp12Hidden .table .linesColumn1 .line:nth-child(2) .middle div:first-child {
+    background: none;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(3) .middle div:last-child,
+.wp12Hidden .table .linesColumn1 .line:nth-child(4) .middle div:last-child {
+    background: none;
+}
+
+
+
+.wp12Hidden .table .linesColumn1 .line {
+    margin: 0 !important;
+}
+
+/* .wp12Hidden .table .linesColumn1 .line:nth-child(1) .middle div {
+    height: 66px;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(1) {
+    margin-top: 52px;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(2) .middle div {
+    height: 66px;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(2) {
+    margin-top: 30px;
+}
+
+.wp12Hidden .table .linesColumn1 .line:nth-child(3) {
+    margin-bottom: 100px;
+} */
+
 .states {
     max-width: 1400px;
     width: 100%;
@@ -68,7 +193,7 @@
     gap: 10px;
     align-items: center;
     background-color: #e6e6e6;
-    width: 448px;
+    width: 420px;
     padding: 16px;
     box-sizing: border-box;
 }
@@ -108,7 +233,7 @@
     background-color: rgba(0, 0, 0, 0.027);
     display: flex;
     flex-direction: column;
-    min-width: 448px;
+    min-width: 420px;
     justify-content: space-around;
 }
 
@@ -500,7 +625,7 @@ table {
 }
 
 .third .matchItem {
-    width: 448px;
+    width: 420px;
 }
 
 .third .matchItem .winPlayer {
